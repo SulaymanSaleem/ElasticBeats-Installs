@@ -12,9 +12,3 @@ sudo update-rc.d filebeat defaults 95 10
 sudo filebeat modules enable kibana
 sudo filebeat modules enable system
 sudo filebeat modules enable elasticsearch
-
-sudo filebeat test output
-sudo filebeat setup -e
-
-sudo systemctl stop filebeat
-sudo systemctl start filebeat

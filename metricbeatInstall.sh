@@ -11,8 +11,3 @@ sudo metricbeat modules enable elasticsearch
 sudo metricbeat modules enable system
 sudo metricbeat modules enable kibana
 
-sudo metricbeat test output
-sudo metricbeat setup -e
-
-sudo systemctl stop metricbeat
-sudo systemctl start metricbeat
