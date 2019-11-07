@@ -8,7 +8,7 @@ sudo apt-get update && sudo apt-get install metricbeat
 sudo update-rc.d metricbeat defaults 95 10
 #Replace metricbeat yaml file
 sudo rm -rf ../etc/metricbeat/metricbeat.yml
-sudo cp metricbeat.yml ../etc/metricbeat
+sudo cp metricbeat.yml /../etc/metricbeat
 #Enable modules
 sudo metricbeat modules enable elasticsearch
 sudo metricbeat modules enable system

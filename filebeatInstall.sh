@@ -10,7 +10,7 @@ sudo update-rc.d filebeat defaults 95 10
 
 #Replace metricbeat yaml file
 sudo rm -rf ../etc/filebeat/filebeat.yml
-sudo cp filebeat.yml ../etc/filebeat/
+sudo cp filebeat.yml /../etc/filebeat/
 #Enable modules
 sudo filebeat modules enable elasticsearch
 sudo filebeat modules enable system
