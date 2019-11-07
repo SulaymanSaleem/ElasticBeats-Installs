@@ -8,7 +8,18 @@ echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee 
 sudo apt-get update && sudo apt-get install filebeat
 sudo update-rc.d filebeat defaults 95 10
 
-#Enabling filebeat modules
-sudo filebeat modules enable kibana
-sudo filebeat modules enable system
+#Replace metricbeat yaml file
+sudo rm -rf ../etc/filebeat/filebeat.yml
+sudo cp filebeat.yml ../etc/filebeat/
+#Enable modules
 sudo filebeat modules enable elasticsearch
+sudo filebeat modules enable system
+sudo filebeat modules enable kibana
+#Test output connection and config
+sudo filebeat test output
+sudo filebeat test config
+#Setup kibana dashboards
+sudo filebeat setup -e
+#Start Metricbeat
+sudo systemctl enable filebeat
+sudo systemctl start filebeat
