@@ -7,7 +7,7 @@ sudo systemctl enable filebeat
 
 sudo cp filebeat.yml /etc/filebeat/
 
-sudo filebeat modules enable elastisearch
+sudo filebeat modules enable elasticsearch
 sudo filebeat modules enable kibana
 sudo filebeat modules enable system
 
