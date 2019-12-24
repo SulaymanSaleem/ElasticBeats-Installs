@@ -4,7 +4,7 @@ sudo rpm --import https://packages.elastic.co/GPG-KEY-elasticsearch
 sudo cp elastic.repo /etc/yum.repos.d/
 sudo yum install metricbeat -y
 
-sudo cp metricbeat.yml /etc/metricbeat/
+sudo cp metricbeat.yml /etc/metricbeat/metricbeat.yml
 
 sudo metricbeat modules enable elasticsearch
 sudo metricbeat modules enable kibana
