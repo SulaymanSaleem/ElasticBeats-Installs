@@ -19,5 +19,5 @@ sudo metricbeat test config
 #Setup kibana dashboards
 sudo metricbeat setup -e
 #Start Metricbeat
-sudo systemctl enable metriccbeat
+sudo systemctl enable metricbeat
 sudo systemctl start metricbeat
